@@ -7,10 +7,15 @@
 </head>
 <body>
   <h1>Lista de Livros</h1>
+  <a href="/livros/criar">Criar Livros</a>
   <ul>
     <% livros.forEach(livro => { %>
-      <li><%= livro.titulo %> - <%= livro.autor %></li>
+      <li>
+        <%= livro.titulo %> - <%= livro.autor %>
+      <a href="/livros/<%= livro.id %>/editar">Editar</a>
+      </li>
     <% }); %>
   </ul>
 </body>
 </html>
+
